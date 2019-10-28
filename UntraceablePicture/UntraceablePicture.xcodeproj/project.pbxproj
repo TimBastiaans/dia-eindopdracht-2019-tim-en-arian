@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F460C46C23606BE30035DC49 /* MainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F460C46B23606BE30035DC49 /* MainModel.swift */; };
+		F460C46F23632D370035DC49 /* TakingPictureService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F460C46E23632D370035DC49 /* TakingPictureService.swift */; };
 		F479DA2A235F30100035112B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F479DA29235F30100035112B /* AppDelegate.swift */; };
 		F479DA2C235F30100035112B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F479DA2B235F30100035112B /* SceneDelegate.swift */; };
 		F479DA2E235F30100035112B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F479DA2D235F30100035112B /* ViewController.swift */; };
@@ -14,9 +16,12 @@
 		F479DA33235F30110035112B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F479DA32235F30110035112B /* Assets.xcassets */; };
 		F479DA36235F30110035112B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F479DA34235F30110035112B /* LaunchScreen.storyboard */; };
 		F479DA40235F31F70035112B /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F479DA3F235F31F70035112B /* CameraViewController.swift */; };
+		F479DA47235F3D330035112B /* TakingPicturePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F479DA46235F3D330035112B /* TakingPicturePresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F460C46B23606BE30035DC49 /* MainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModel.swift; sourceTree = "<group>"; };
+		F460C46E23632D370035DC49 /* TakingPictureService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakingPictureService.swift; sourceTree = "<group>"; };
 		F479DA26235F30100035112B /* UntraceablePicture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UntraceablePicture.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F479DA29235F30100035112B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F479DA2B235F30100035112B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +31,7 @@
 		F479DA35235F30110035112B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F479DA37235F30110035112B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F479DA3F235F31F70035112B /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		F479DA46235F3D330035112B /* TakingPicturePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakingPicturePresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +45,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F460C46D23632C9C0035DC49 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				F460C46E23632D370035DC49 /* TakingPictureService.swift */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
 		F479DA1D235F30100035112B = {
 			isa = PBXGroup;
 			children = (
@@ -58,16 +72,43 @@
 		F479DA28235F30100035112B /* UntraceablePicture */ = {
 			isa = PBXGroup;
 			children = (
+				F460C46D23632C9C0035DC49 /* DataSource */,
+				F479DA45235F3C4B0035112B /* Views */,
+				F479DA44235F3C330035112B /* Presenters */,
+				F479DA43235F3C2E0035112B /* Models */,
 				F479DA29235F30100035112B /* AppDelegate.swift */,
 				F479DA2B235F30100035112B /* SceneDelegate.swift */,
-				F479DA2D235F30100035112B /* ViewController.swift */,
 				F479DA2F235F30100035112B /* Main.storyboard */,
 				F479DA32235F30110035112B /* Assets.xcassets */,
 				F479DA34235F30110035112B /* LaunchScreen.storyboard */,
 				F479DA37235F30110035112B /* Info.plist */,
-				F479DA3F235F31F70035112B /* CameraViewController.swift */,
 			);
 			path = UntraceablePicture;
+			sourceTree = "<group>";
+		};
+		F479DA43235F3C2E0035112B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F460C46B23606BE30035DC49 /* MainModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F479DA44235F3C330035112B /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				F479DA46235F3D330035112B /* TakingPicturePresenter.swift */,
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		F479DA45235F3C4B0035112B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F479DA2D235F30100035112B /* ViewController.swift */,
+				F479DA3F235F31F70035112B /* CameraViewController.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,10 +182,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F460C46F23632D370035DC49 /* TakingPictureService.swift in Sources */,
 				F479DA2E235F30100035112B /* ViewController.swift in Sources */,
 				F479DA40235F31F70035112B /* CameraViewController.swift in Sources */,
+				F460C46C23606BE30035DC49 /* MainModel.swift in Sources */,
 				F479DA2A235F30100035112B /* AppDelegate.swift in Sources */,
 				F479DA2C235F30100035112B /* SceneDelegate.swift in Sources */,
+				F479DA47235F3D330035112B /* TakingPicturePresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

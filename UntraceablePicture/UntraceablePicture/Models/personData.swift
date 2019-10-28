@@ -1,5 +1,5 @@
 //
-//  CameraViewController.swift
+//  personData.swift
 //  UntraceablePicture
 //
 //  Created by Tim Bastiaans on 22/10/2019.
@@ -8,3 +8,7 @@
 
 import Foundation
 
+struct TrafficLight {
+    let colorName: String
+    let description: String
+}
